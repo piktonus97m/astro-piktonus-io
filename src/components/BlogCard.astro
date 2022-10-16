@@ -1,0 +1,41 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+  pubDate?: string;
+  url?: string | undefined;
+  tags?: string[];
+  image?: string;
+}
+
+let { title, description, pubDate, url, tags, image } = Astro.props;
+const fullDate = new Date(pubDate).toLocaleDateString("en", {
+  dateStyle: "full",
+});
+url = url + "/";
+
+// https://tailwindcomponents.com/component/tailwind-css-blog-card
+---
+
+<div class="max-w-lg mx-auto">
+  <a href={url}>
+    <div class="dark:bg-gray-800 dark:hover:bg-gray-700 shadow-xl rounded-xl max-w-sm mb-5 hover:scale-105 transition">
+      <img class="rounded-t-lg" src={image} alt="" />
+
+      <div class="p-5">
+        <h1 class="dark:text-white font-semibold text-2xl mb-2">{title}</h1>
+        <p>{pubDate}</p>
+        {
+          tags && (
+            <ul class="flex gap-2 flex-wrap my-2">
+              {tags.map((tags) => (
+                <li class="dark:bg-slate-700 bg-zinc-200 dark:text-white py-0.5 px-2 text-sm rounded-md transition-colors">{tags}</li>
+              ))}
+            </ul>
+          )
+        }
+        <p class="font-normal dark:text-zinc-200 mb-3">{description}</p>
+      </div>
+    </div>
+  </a>
+</div>
