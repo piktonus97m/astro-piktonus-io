@@ -1,15 +1,13 @@
-# Astro on Black and White 🚀
+# Astro Basic Blog Template 🚀
 
-> **Warning**
-> This theme is still under development!
-
-Hello, this is very first astro theme that I will create.
+Hey there, this is my very first astro theme that I will create.
 This blog template is made with [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com) for the Front-end.
 
-You can email me with my email address on my website or [create an Issue](https://github.com/lancerossdev/astro-bw-blog/issues/new) if you think there's something wrong or you want to add something with this blog template. I will appreciate your help!
+You can email me with my email address on my website or [create an Issue](https://github.com/lancerossdev/astro-basic-blog/issues/new) if you think there's something wrong or you want to add a new feature on this blog template. I will appreciate your help!
 
+![Preview of the template](https://user-images.githubusercontent.com/102563271/196021355-1deff447-de23-41b8-8cf3-035459a27662.png)
 
-I will try to update this every time I uploaded something like on blogs and projects page or when I encountered an issue I forgot to fix.
+I will try to update this every time when I encountered an issue I forgot to fix.
 
 ## Dev Notes 📝
 
@@ -25,4 +23,4 @@ You can use `npm i` or `pnpm i` to install dependencies. I personally use `yarn`
 
 ## License ⚖️
 
-This repository has [MIT License](https://github.com/lancerossdev/astro-bw-blog/blob/master/LICENSE).
+This repository has [MIT License](https://github.com/lancerossdev/astro-basic-blog/blob/master/LICENSE).
