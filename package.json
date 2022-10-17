@@ -8,6 +8,7 @@
     "preview": "astro build && astro preview"
   },
   "devDependencies": {
+    "@astrojs/image": "^0.10.0",
     "@astrojs/mdx": "^0.11.4",
     "@astrojs/sitemap": "^1.0.0",
     "@astrojs/tailwind": "^2.0.2",
