@@ -74,9 +74,9 @@ const { frontmatter } = Astro.props;
   <body class="font-worksans dark:bg-zinc-900 dark:text-white transition-colors scrollbar-thin scrollbar-thumb-zinc-400 scrollbar-track-zinc-300 dark:scrollbar-thumb-zinc-600 dark:scrollbar-track-zinc-800">
     <main class="m-auto p-6 max-w-4xl">
       <Header />
-      <section class="sm:prose-xl !prose-lg !p-3 mt-6 dark:text-zinc-200 dark:prose-a:text-blue-400 prose-a:text-blue-600 prose-img:rounded-lg">
+      <section class="sm:prose-xl !prose-lg !p-3 mt-9 dark:text-zinc-200 dark:prose-a:text-blue-400 prose-a:text-blue-600 prose-img:rounded-lg">
         <h1 class="text-4xl mt-4 font-semibold m-0">{frontmatter.title}</h1>
-        <h2 class="text-2xl dark:text-zinc-300 my-4 mb-7">Written by {frontmatter.author} at {frontmatter.pubDate}</h2>
+        <h2 class="!text-[1.6rem] dark:text-zinc-300 my-4 mb-7">Written by {frontmatter.author} at {frontmatter.pubDate}</h2>
         <slot />
       </section>
     </main>
