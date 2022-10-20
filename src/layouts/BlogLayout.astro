@@ -28,7 +28,7 @@ const { frontmatter } = Astro.props;
     <meta property="og:description" content={frontmatter.description} />
     <meta property="og:image" content={frontmatter.image} />
     <meta property="og:image:alt" content={frontmatter.imagealt} />
-    <meta property="og:site_name" content={frontmatter.title} />
+    <meta property="og:site_name" content="Astro Basic Blog Template" />
     <meta property="og:locale" content="en_US" />
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalURL} />
@@ -78,6 +78,7 @@ const { frontmatter } = Astro.props;
         <h1 class="text-4xl mt-4 font-semibold m-0">{frontmatter.title}</h1>
         <h2 class="!text-[1.6rem] dark:text-zinc-300 my-4 mb-7">Written by {frontmatter.author} at {frontmatter.pubDate}</h2>
         <slot />
+        <a href="/" class="dark:text-blue-400 text-blue-600">Go back to home</a>
       </section>
     </main>
   </body>
