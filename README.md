@@ -3,7 +3,7 @@
 Hey there, this is my very first astro theme that I will create.
 This blog template is made with [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com) for the Front-end.
 
-You can email me with my email address on my website or [create an Issue](https://github.com/lancerossdev/astro-basic-blog/issues/new) if you think there's something wrong or you want to add a new feature on this blog template. I will appreciate your help!
+You can [create an Issue](https://github.com/lancerossdev/astro-basic-blog/issues/new) if you think there's something wrong or you want to add a new feature on this blog template. I will appreciate your help!
 
 ![Preview of the template](https://user-images.githubusercontent.com/102563271/196021355-1deff447-de23-41b8-8cf3-035459a27662.png)
 

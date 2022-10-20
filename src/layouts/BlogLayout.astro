@@ -78,7 +78,7 @@ const { frontmatter } = Astro.props;
         <h1 class="text-4xl mt-4 font-semibold m-0">{frontmatter.title}</h1>
         <h2 class="!text-[1.6rem] dark:text-zinc-300 my-4 mb-7">Written by {frontmatter.author} at {frontmatter.pubDate}</h2>
         <slot />
-        <a href="/" class="dark:text-blue-400 text-blue-600">Go back to home</a>
+        <br><a href="/" class="dark:text-blue-400 text-blue-600">Go back to home</a>
       </section>
     </main>
   </body>
