@@ -13,11 +13,11 @@ const { frontmatter } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" style="scroll-behavior: smooth;">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{frontmatter.title}</title>
     <link rel="canonical" href={canonicalURL} />
     <meta name="title" content={frontmatter.title} />
@@ -72,13 +72,17 @@ const { frontmatter } = Astro.props;
     </script>
   </head>
   <body class="font-worksans dark:bg-zinc-900 dark:text-white transition-colors scrollbar-thin scrollbar-thumb-zinc-400 scrollbar-track-zinc-300 dark:scrollbar-thumb-zinc-600 dark:scrollbar-track-zinc-800">
+    <Header />
     <main class="m-auto p-6 max-w-4xl">
-      <Header />
       <section class="sm:prose-xl !prose-lg !p-3 mt-9 dark:text-zinc-200 dark:prose-a:text-blue-400 prose-a:text-blue-600 prose-img:rounded-lg">
         <h1 class="text-4xl mt-4 font-semibold m-0">{frontmatter.title}</h1>
         <h2 class="!text-[1.6rem] dark:text-zinc-300 my-4 mb-7">Written by {frontmatter.author} at {frontmatter.pubDate}</h2>
         <slot />
-        <br><a href="/" class="dark:text-blue-400 text-blue-600">Go back to home</a>
+        <br>
+        <div class="flex flex-row justify-between text-base md:text-lg">
+          <a href="/" class="dark:text-blue-400 text-blue-600">Go back to home</a>
+          <a href="#" class="dark:text-blue-400 text-blue-600">Go back to top</a>
+        </div>
       </section>
     </main>
   </body>

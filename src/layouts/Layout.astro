@@ -15,7 +15,7 @@ const canonicalURL = new URL(Astro.url).href;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
     <link rel="canonical" href={canonicalURL} />
     <meta name="title" content={title} />
@@ -70,8 +70,8 @@ const canonicalURL = new URL(Astro.url).href;
     </script>
   </head>
   <body class="font-worksans dark:bg-zinc-900 dark:text-white transition-colors selection:bg-sky-600/60 scrollbar-thin scrollbar-thumb-zinc-400 scrollbar-track-zinc-300 dark:scrollbar-thumb-zinc-600 dark:scrollbar-track-zinc-800">
+    <Header />
     <main class="m-auto p-6 max-w-4xl">
-      <Header />
       <slot />
     </main>
     <footer class="grid place-items-center py-8 text-lg">
