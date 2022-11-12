@@ -1,5 +1,7 @@
 # Astro Basic Blog Template 🚀
 
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/lancerossdev/astro-basic-blog)
+
 Hey there, this is my very first astro theme that I will create.
 This blog template is made with [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com) for the Front-end.
 
