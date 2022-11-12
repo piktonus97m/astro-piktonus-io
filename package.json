@@ -8,11 +8,11 @@
     "preview": "astro build && astro preview"
   },
   "devDependencies": {
+    "@astrojs/image": "^0.11.2",
     "@astrojs/mdx": "^0.11.4",
-    "@astrojs/rss": "^1.0.3",
     "@astrojs/sitemap": "^1.0.0",
     "@astrojs/tailwind": "^2.0.2",
-    "@fontsource/work-sans": "^4.5.12",
+    "@fontsource/inter": "^4.5.14",
     "@tailwindcss/typography": "^0.5.7",
     "astro": "^1.5.0",
     "astro-compress": "1.0.8",

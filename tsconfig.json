@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
-    "types": ["astro/client"],
+    "types": ["astro/images/client"],
     "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
-      "@content/*": ["src/content/*"]
+      "@content/*": ["src/content/*"],
+      "@images/*": ["src/images/*"],
     }
   }
 }

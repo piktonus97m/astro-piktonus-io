@@ -1,6 +1,9 @@
 ---
-import "@fontsource/work-sans";
+import "@fontsource/inter";
 import Header from "@components/Header.astro";
+
+let { pubDate } = Astro.props.content;
+const { frontmatter } = Astro.props;
 export interface Props {
   title?: string;
   description?: string;
@@ -8,12 +11,20 @@ export interface Props {
   ImageAlt?: string;
 }
 
+const thisDate = new Date(pubDate).toLocaleDateString("en", {
+  dateStyle: "long",
+});
+pubDate = pubDate.split("T")[0];
+
+const ogImageParams = new URLSearchParams({
+  title: JSON.stringify(frontmatter.title)
+}).toString()
+
 const canonicalURL = new URL(Astro.url).href;
-const { frontmatter } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en-US" style="scroll-behavior: smooth;">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -26,18 +37,18 @@ const { frontmatter } = Astro.props;
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={frontmatter.title} />
     <meta property="og:description" content={frontmatter.description} />
-    <meta property="og:image" content={frontmatter.image} />
-    <meta property="og:image:alt" content={frontmatter.imagealt} />
+    <meta property="og:image" content={`/og?${ogImageParams}`} />
     <meta property="og:site_name" content="Astro Basic Blog Template" />
     <meta property="og:locale" content="en_US" />
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalURL} />
-    <meta name="twitter:site" content="@twitter" />
-    <meta name="twitter:creator" content="@twitter" />
+    <meta name="twitter:site" content="@lancerossdev" />
+    <meta name="twitter:creator" content="@lancerossdev" />
     <meta property="twitter:title" content={frontmatter.title} />
     <meta property="twitter:description" content={frontmatter.description} />
-    <meta property="twitter:image" content={frontmatter.image} />
+    <meta property="twitter:image" content={`/og?${ogImageParams}`} />
     <meta name="generator" content={Astro.generator} />
+    <meta name="author" content="Lance Ross" />
     <script is:inline>
       // credits to satnaing on github
       const primaryColorScheme = "none";
@@ -71,18 +82,28 @@ const { frontmatter } = Astro.props;
       });
     </script>
   </head>
-  <body class="font-worksans dark:bg-zinc-900 dark:text-white transition-colors scrollbar-thin scrollbar-thumb-zinc-400 scrollbar-track-zinc-300 dark:scrollbar-thumb-zinc-600 dark:scrollbar-track-zinc-800">
+  <body
+    class="font-inter dark:bg-zinc-900 dark:text-white transition-colors scrollbar-thin scrollbar-thumb-zinc-400 scrollbar-track-zinc-300 dark:scrollbar-thumb-zinc-600 dark:scrollbar-track-zinc-800"
+  >
     <Header />
     <main class="m-auto p-6 max-w-4xl">
-      <section class="sm:prose-xl !prose-lg !p-3 mt-9 dark:text-zinc-200 dark:prose-a:text-blue-400 prose-a:text-blue-600 prose-img:rounded-lg">
-        <h1 class="text-4xl mt-4 font-semibold m-0">{frontmatter.title}</h1>
-        <h2 class="!text-[1.6rem] dark:text-zinc-300 my-4 mb-7">Written by {frontmatter.author} at {frontmatter.pubDate}</h2>
-        <slot />
-        <br>
-        <div class="flex flex-row justify-between text-base md:text-lg">
-          <a href="/" class="dark:text-blue-400 text-blue-600">Go back to home</a>
-          <a href="#" class="dark:text-blue-400 text-blue-600">Go back to top</a>
-        </div>
+      <section class="sm:prose-xl !prose-lg !p-3 mt-3 dark:text-zinc-200 dark:prose-a:text-blue-400 prose-a:text-blue-600">
+        <header class="mb-5">
+          <h1 class="m-0 !text-4xl mb-7 dark:text-white">{frontmatter.title}</h1>
+          <nav class="flex flex-col sm:flex-row sm:space-x-3 text-base dark:text-zinc-400">
+            <time datetime={frontmatter.pubDate} class="mb-3 sm:mb-0">
+              {thisDate}
+            </time>
+            <span class="hidden sm:block">·</span>
+            <span>Written by Lance Ross</span>
+          </nav>
+        </header>
+        <article>
+          <slot />
+        </article>
+        <footer class="flex flex-row justify-between mt-16 text-lg">
+          <a href="/posts" class="dark:text-blue-400 text-blue-600">Back to posts</a>
+        </footer>
       </section>
     </main>
   </body>
