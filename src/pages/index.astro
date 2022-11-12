@@ -10,8 +10,8 @@ import { recent } from "@content/blogs";
     <h2 class="text-xl text-black dark:text-zinc-300">I got bored and decided to create an Astro template from scratch. Hope you like it!</h2>
   </section>
   <section class="py-8">
-    <h1 class="text-3xl">Recent Posts</h1>
-    <h2>Looking for all of my blog posts? Click the paper with pen logo on the navbar!</h2>
+    <h1 class="text-3xl mb-5">Recent Posts</h1>
+    <h2 class="text-xl text-black dark:text-zinc-300 mb-2">Looking for all of my blog posts? Click the paper with pen logo on the navbar!</h2>
     <div class="flex flex-col sm:grid-cols-2 place-items-center py-5 gap-2 sm:grid">
       {recent.map((recent) => <BlogCard title={recent.title} description={recent.description} pubDate={recent.pubDate} url={recent.url} tags={recent.tags} />)}
     </div>
