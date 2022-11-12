@@ -3,13 +3,14 @@ import compress from "astro-compress";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
+import image from "@astrojs/image";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://basicblog.lanceross.xyz",
   markdown: {
     shikiConfig: {
-      theme: "slack-dark",
+      theme: "one-dark-pro",
       wrap: true,
     },
   },
@@ -26,10 +27,10 @@ export default defineConfig({
       js: true,
       img: true,
       svg: true,
-      webp: true,
     }),
     tailwind(),
     sitemap(),
     mdx(),
+    image(),
   ],
 });

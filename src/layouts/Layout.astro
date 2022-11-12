@@ -1,5 +1,5 @@
 ---
-import "@fontsource/work-sans";
+import "@fontsource/inter";
 import Header from "@components/Header.astro";
 export interface Props {
   title?: string;
@@ -69,9 +69,9 @@ const canonicalURL = new URL(Astro.url).href;
       });
     </script>
   </head>
-  <body class="font-worksans dark:bg-zinc-900 dark:text-white transition-colors selection:bg-sky-600/60 scrollbar-thin scrollbar-thumb-zinc-400 scrollbar-track-zinc-300 dark:scrollbar-thumb-zinc-600 dark:scrollbar-track-zinc-800">
+  <body class="font-inter dark:bg-zinc-900 dark:text-white transition-colors selection:bg-sky-600/60 scrollbar-thin scrollbar-thumb-zinc-400 scrollbar-track-zinc-300 dark:scrollbar-thumb-zinc-600 dark:scrollbar-track-zinc-800">
     <Header />
-    <main class="m-auto p-6 max-w-4xl">
+    <main class="m-auto px-8 max-w-4xl">
       <slot />
     </main>
     <footer class="grid place-items-center py-8 text-lg">

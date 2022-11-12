@@ -2,10 +2,22 @@
 import { Icon } from "astro-icon";
 ---
 
-<header class="flex justify-between items-center p-6 sticky top-0 dark:bg-zinc-900 bg-white max-w-4xl m-auto px-7 transition-colors !backdrop-blur-sm !bg-opacity-80">
-  <h1 class="text-2xl font-bold"><a href="/">lanceross</a></h1>
-  <button class="theme-toggle pointer" aria-label="theme toggle">
-    <Icon name="akar-icons:moon" class="w-[26px] dark-btn hover:text-slate-500 dark:hover:text-slate-400 transition hover:scale-110 dark:hidden" />
-    <Icon name="akar-icons:sun" class="w-[26px] light-btn dark:text-white hover:text-slate-500 dark:hover:text-slate-400 transition hover:scale-110 hidden dark:block" />
-  </button>
+<header class="dark:bg-zinc-900 bg-white max-w-4xl m-auto transition-colors">
+  <a href="/" class="text-2xl text-black dark:text-zinc-300 transition-colors absolute m-8">lanceross</a>
+  <nav class="p-8">
+    <div class="flex justify-end items-center  m-0">
+      <div class="flex flex-row space-x-3">
+        <a href="/posts" aria-label="notepad logo">
+          <Icon name="jam:write" class="w-7 text-black dark:text-white hover:text-slate-500 dark:hover:text-slate-400 transition-colors" />
+        </a>
+        <a href="https://github.com/lancerossdev/astro-basic-blog" target="_blank" rel="noopener nofollow" aria-label="github logo">
+          <Icon name="eva:github-outline" class="w-7 text-black dark:text-white hover:text-slate-500 dark:hover:text-slate-400 transition-colors" />
+        </a>
+        <button class="theme-toggle pointer" aria-label="theme toggle">
+          <Icon name="charm:moon" class="w-7 hover:text-slate-500 dark:hover:text-slate-400 transition-colors dark:hidden" />
+          <Icon name="akar-icons:sun" class="w-7 dark:text-white hover:text-slate-500 dark:hover:text-slate-400 transition-colors hidden dark:block" />
+        </button>
+      </div>
+    </div>
+  </nav>
 </header>

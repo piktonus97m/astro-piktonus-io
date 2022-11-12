@@ -1,0 +1,20 @@
+---
+import Layout from "@layouts/Layout.astro";
+import BlogCard from "@components/BlogCard.astro";
+import { blogs } from "@content/blogs";
+---
+
+<Layout title="Posts" description="hello world">
+  <section class="flex flex-col mt-8">
+    <h1 class="text-3xl mb-5">Posts</h1>
+    <h2 class="text-xl text-black dark:text-zinc-300">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam facilis a at in eaque deleniti cum blanditiis consectetur sequi facere, illo voluptate consequuntur repudiandae fugiat
+      libero. Magnam quos quas asperiores!
+    </h2>
+  </section>
+  <section>
+    <div class="flex flex-col sm:grid-cols-2 place-items-center py-5 gap-2 sm:grid">
+      {blogs.map((blog) => <BlogCard title={blog.title} description={blog.description} pubDate={blog.pubDate} url={blog.url} tags={blog.tags} />)}
+    </div>
+  </section>
+</Layout>
