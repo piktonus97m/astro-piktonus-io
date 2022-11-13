@@ -7,7 +7,7 @@ import image from "@astrojs/image";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://basicblog.lanceross.xyz",
+  site: "https://piktonus.io",
   markdown: {
     shikiConfig: {
       theme: "one-dark-pro",
