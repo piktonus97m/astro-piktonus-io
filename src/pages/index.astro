@@ -4,14 +4,19 @@ import BlogCard from "@components/BlogCard.astro";
 import { recent } from "@content/blogs";
 ---
 
-<Layout title="Astro Basic Blog Template" description="This is a blog template made with Astro and Tailwind. Made by Lance Ross">
+<Layout title="Francisco Sanabria" description="Welcome to my digital garden. Francisco Sanabria blog page">
   <section class="flex flex-col py-8">
-    <h1 class="text-3xl mb-5">Welcome to my Astro Blog Template</h1>
-    <h2 class="text-xl text-black dark:text-zinc-300">I got bored and decided to create an Astro template from scratch. Hope you like it!</h2>
+    <h1 class="text-3xl mb-5">Welcome to my Digital Garden</h1>
+    <h2 class="text-xl text-black dark:text-zinc-300">In this blog page you can find thoughts my and research about topics related to Linux, Cloud Native, DevOps, music and lots of nerd stuff. Hope you can find something of your interest. You will find English and Spanish comments.</h2>
+  </section>
+    <h2 class="text-xl text-black dark:text-zinc-300">En este lugar es donde escribo mis pensamientos e investigaciones. Aquí hablamos de Linux, Cloud Native, DevOps, música, y cosas nerds. Ojalá que puedas encontrar algo de tu interés. :) Vas a encontrar contenido escrito en inglés y español. </h2>
+  <section class="flex flex-col py-8">
+    <h1 class="text-2xl mb-5"><a href="/about">About Me</a></h1>
+    <h2 class="text-xl text-black dark:text-zinc-300">Cloud Engineer located in Costa Rica. Also a visual artist and Music producer.</h2>
   </section>
   <section class="py-8">
     <h1 class="text-3xl mb-5">Recent Posts</h1>
-    <h2 class="text-xl text-black dark:text-zinc-300 mb-2">Looking for all of my blog posts? Click the paper with pen logo on the navbar!</h2>
+    <h2 class="text-xl text-black dark:text-zinc-300 mb-2"><a href="/posts">Check all my posts here!</a></h2>
     <div class="flex flex-col sm:grid-cols-2 place-items-center py-5 gap-2 sm:grid">
       {recent.map((recent) => <BlogCard title={recent.title} description={recent.description} pubDate={recent.pubDate} url={recent.url} tags={recent.tags} />)}
     </div>
