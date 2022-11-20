@@ -1,33 +1,19 @@
 export const recent = [
   {
-    title: "Why did I create this blog template?",
-    description: "You might be wondering, why did I create this blog template using Astro?",
-    pubDate: "10/16/2022",
-    url: "/posts/but-why-tho",
-    tags: ["Astro", "Blog", "Template"],
-  },
-  {
-    title: "How to create a blog with this template",
-    description: "Here is a guide how to create a blog with this template and deploy this to Netlify!",
-    pubDate: "10/17/2022",
-    url: "/posts/how-to-deploy",
-    tags: ["Astro", "Deploy", "Netlify"],
+    title: "Azure the hard way: DevOps and Terraform",
+    description: "Aprende DevOps por las malas usando Terraform y Azure.",
+    pubDate: "11/20/2022",
+    url: "/posts/001-azure-the-hard-way",
+    tags: ["challenge", "azure", "devops"],
   },
 ];
 
 export const blogs = [
   {
-    title: "Why did I create this blog template?",
-    description: "You might be wondering, why did I create this blog template using Astro?",
-    pubDate: "10/16/2022",
-    url: "/posts/but-why-tho",
-    tags: ["Astro", "Blog", "Template"],
-  },
-  {
-    title: "How to create a blog with this template",
-    description: "Here is a guide how to create a blog with this template and deploy this to Netlify!",
-    pubDate: "10/17/2022",
-    url: "/posts/how-to-deploy",
-    tags: ["Astro", "Deploy", "Netlify"],
+    title: "Azure the hard way: DevOps and Terraform",
+    description: "Aprende DevOps por las malas usando Terraform y Azure.",
+    pubDate: "11/20/2022",
+    url: "/posts/001-azure-the-hard-way",
+    tags: ["challenge", "azure", "devops"],
   },
 ];
