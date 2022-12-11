@@ -6,6 +6,13 @@ export const recent = [
     url: "/posts/001-azure-the-hard-way",
     tags: ["challenge", "azure", "devops"],
   },
+  {
+    title: "Organización del árbol de directorios en unix ",
+    description: "aprende devops por las malas usando terraform y azure.",
+    pubdate: "12/10/2022",
+    url: "/posts/002-organization-of-the-file-tree",
+    tags: ["Linux", "Unix"],
+  },
 ];
 
 export const blogs = [
@@ -15,5 +22,12 @@ export const blogs = [
     pubDate: "11/20/2022",
     url: "/posts/001-azure-the-hard-way",
     tags: ["challenge", "azure", "devops"],
+  },
+  {
+    title: "Organización del árbol de directorios en unix ",
+    description: "Aprendamos como distinguir entre los diferentes tipos de archivos y directorios en unix.",
+    pubdate: "12/10/2022",
+    url: "/posts/002-organization-of-the-file-tree",
+    tags: ["Linux", "Unix"],
   },
 ];
